@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Abvito</title>
+{% endblock %}
+{% block header %}
+<div class="d-flex flex-row-revers">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link" href="/reg">Регистрация</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/vhod">Вход</a>
+          </li>
+          <li class="nav-item button">
+              <a class="btn btn-outline-danger" href="/add">Разместить объявление</a>
+          </li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+      </header>
+      <header>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-sm-6">
+                          <input class="form-control me-2" type="search" placeholder="Хочу обменять на" aria-label="Search">
+                      </div>
+                      <div class="col">
+                          <select class="form-select" aria-label="form-select">
+  <option selected>Выбери город</option>
+  <option value="1">Москва</option>
+  <option value="2">Санкт-Петербург</option>
+</select>
+                      </div>
+                      <div class="col">
+                          <button class="btn btn-outline-danger" type="submit">Искать</button>
+                      </div>
+                  </div>
+              </div>
+          </nav>
+      </header>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block body %}
+      <h3>Последние публикации</h3>
+<div class="border-danger row row-cols-5 row-cols-md-5 mb-5 text-left">
+    {% for el in data %}
+        <div class="col">
+        <div class="card border-danger mb-2">
+      <div class="card-header">
+          <img src="..." class="card-img-top" alt="...">
+        <h4 class="my-0 fw-normal">{{ el.title }}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">~ <small class="text-muted">{{ el.about }}</small></h1>
+        <ul class="list-unstyled mt-6 mb-6">
+          <li>Адрес:</li>
+          <li>О товаре:</li>
+          <li>пользователь:</li>
+        </ul>
+        <button type="button" class="btn btn-danger">Sign up for free</button>
+      </div>
+    </div>
+</div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+

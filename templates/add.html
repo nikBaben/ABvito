@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>добавлене товара </title>
+{% endblock %}
+{% block body %}
+<form method="post">
+     <div class="mb-3">
+         <label for="InputName" class="form-label">Введите имя</label>
+         <input type="text" class="form-control" id="InputName" name="name_item" aria-describedby="nameHelp">
+     </div>
+    <div class="mb-3">
+         <label for="InputName" class="form-label">О товаре </label>
+         <input type="text" class="form-control"  name="about" >
+     </div>
+    <div class="mb-3">
+         <label for="InputName" class="form-label">Адресс</label>
+         <input type="text" class="form-control"  name="adress" >
+     </div>
+    <button class="btn btn-success" type="submit">Добавить</button>
+</form>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
